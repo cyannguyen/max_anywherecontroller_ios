@@ -1,0 +1,19 @@
+{
+    "username": "使用者名稱",
+    "password": "密碼",
+    "serverurl": "Maximo Server URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "連接",
+    "loading": "正在載入...",
+    "updating": "正在檢查應用程式更新項目...",
+    "nonet": "沒有可用的網路連線",
+    "download": "正在下載 ",
+    "serverurlinvalid": "無法從現行伺服器中使用應用程式，請與您的管理者聯絡。",
+    "completed": "已順利完成下載",
+    "canceled": "下載已終止",
+    "notavaliable": "無法從現行伺服器中使用應用程式，請與您的管理者聯絡。",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 具有 $2 {{plural:$2|kitten|kittens}}。{{gender:$3|He|She}} 喜歡使用 {{plural:$2|it|them}}。",
+    "offline": "沒有可用的網路連線",
+    "Invalid URL": "無法從現行伺服器中使用應用程式，請與您的管理者聯絡。",
+    "RootedJailBroken": "應用程式無法使用，因為電話已越獄或刷機。"
+}

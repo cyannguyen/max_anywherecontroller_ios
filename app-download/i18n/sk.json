@@ -1,0 +1,19 @@
+{
+    "username": "Meno užívateľa",
+    "password": "Heslo",
+    "serverurl": "Adresa URL servera Maximo",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Pripojiť",
+    "loading": "Načítava sa...",
+    "updating": "Kontrolujú sa aktualizácie aplikácie...",
+    "nonet": "Nie je k dispozícii žiadne sieťové pripojenie",
+    "download": "Preberá sa",
+    "serverurlinvalid": "Aplikácia nie je k dispozícii na použitie z aktuálneho servera, kontaktujte svojho administrátora.",
+    "completed": "Preberanie bolo úspešne dokončené",
+    "canceled": "Preberanie bolo ukončené",
+    "notavaliable": "Aplikácia nie je k dispozícii na použitie z aktuálneho servera, kontaktujte svojho administrátora.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 má $2 {{plural:$2|mačiatko|mačiatok}}. {{gender:$3|Rád|Rada}} sa s {{plural:$2|ním|nimi}} hrá.",
+    "offline": "Nie je k dispozícii žiadne sieťové pripojenie",
+    "Invalid URL": "Aplikácia nie je k dispozícii na použitie z aktuálneho servera, kontaktujte svojho administrátora.",
+    "RootedJailBroken": "Appka nie je k dispozícii, pretože telefón obsahuje jailbreak alebo root."
+}

@@ -1,0 +1,263 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+ * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face{
+  font-family: "IBM Plex Sans Light";
+  src: url('IBMPlexSans-Light.woff') format('woff');
+}
+
+body {
+    -webkit-touch-callout: text;
+    /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: text;
+    /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: #E4E4E4;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 12px;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    /*text-transform:uppercase;*/
+    width: 100%;
+}
+
+
+/* Portrait layout (default) */
+
+.app {
+    flex-direction: column;
+    padding-top: 25%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+}
+
+.event {
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
+}
+
+.event.listening {
+    background-color: #333333;
+    display: block;
+    text-align: center;
+}
+
+.event.received {
+    background-color: #4B946A;
+    display: none;
+    text-align: center;
+}
+
+.event.offiline {
+    background-color: #ff0000;
+    display: none;
+    text-align: center;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+.fieldentry {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.connect {
+    color: black;
+    text-decoration: unset;
+    font-weight: bold;
+    margin-top: 10pt;
+    border: 0;
+    background: transparent;
+    outline: 0;
+}
+
+.logo {
+    width: 75px;
+}
+
+.topheader {
+    display: -webkit-box;
+    text-align: center;
+    padding-bottom: 10pt
+}
+
+.button-cl {
+    margin: auto;
+}
+
+.space-down {
+    margin-top: 20px !important;
+}
+
+.url-form {
+    margin-top: 30px;
+}
+
+.center-it {
+    text-align: center;
+    margin: auto;
+}
+
+.input-box {
+    width: 100%
+}
+
+.input-container {
+    width: 100%
+}
+
+.error-msg-box {
+    display: block;
+    background-color: red;
+    margin: 5px 0px;
+    padding: 5px;
+}
+.productLogo {
+	width: 100px;
+}
+.IBMLogo {
+	width:75px;
+}
+.productName {
+	font-family: "IBM Plex Sans Light" !important;
+	font-size: min(5vw, 24px);
+	font-weight: normal;
+	color: #222222 !important;
+}
+.index-row {
+	padding: 10px
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  /*margin: 15% auto; *//* 15% from the top and centered */
+  /*padding: 20px;*/
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  /*border-radius: 13px;*/
+  height: 100%;
+  padding:2.5em 2.5em 2.5em 2.5em;
+  padding:2.5em constant(safe-area-inset-right) 2.5em constant(safe-area-inset-left);
+}
+
+/* The Close Button */
+.close {
+    text-align: center;
+    color: #007AFF;
+    text-decoration: none;
+    line-height:25px;
+    font-weight:bold;
+    display: block;
+    border-top: 1px solid #BABABA;
+}
+.modal-text {
+    white-space: pre-wrap;
+    max-height : 95%;
+    overflow : auto;
+    text-align: left;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-header {
+    text-align: left;
+    padding-bottom: 10pt;
+    margin: auto;
+}
+.modal-footer {
+    text-align: center;
+    padding-bottom: 20pt;
+    margin: auto;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btnrow{
+	text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+    "username": "Ime korisnika",
+    "password": "Lozinka",
+    "serverurl": "URL Maximo poslužitelja",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Povezivanje",
+    "loading": "Učitavanje ...",
+    "updating": "Provjera za ažuriranja aplikacije ...",
+    "nonet": "Nije dostupna veza s mrežom",
+    "download": "Preuzimanje",
+    "serverurlinvalid": "Aplikacija nije dostupna za korištenje na trenutnom poslužitelju, molim kontaktirajte administratora.",
+    "completed": "Preuzimanje je uspješno dovršeno",
+    "canceled": "Preuzimanje je prekinuto",
+    "notavaliable": "Aplikacija nije dostupna za korištenje na trenutnom poslužitelju, molim kontaktirajte administratora.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 ima $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} voli se igrati s {{plural:$2|it|them}}.",
+    "offline": "Nije dostupna veza s mrežom",
+    "Invalid URL": "Aplikacija nije dostupna za korištenje na trenutnom poslužitelju, molim kontaktirajte administratora.",
+    "RootedJailBroken": "Aplikacija nije dostupna jer su uklonjena originalna ograničenja mobilnog telefona ili telefon nije mobilan."
+}

@@ -1,0 +1,19 @@
+{
+    "username": "用户名",
+    "password": "密码",
+    "serverurl": "Maximo 服务器 URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "连接",
+    "loading": "正在装入...",
+    "updating": "正在检查应用程序更新...",
+    "nonet": "没有可用的网络连接",
+    "download": "正在下载 ",
+    "serverurlinvalid": "当前服务器中没有可供使用的应用程序，请联系管理员。",
+    "completed": "已成功完成下载",
+    "canceled": "已终止下载",
+    "notavaliable": "当前服务器中没有可供使用的应用程序，请联系管理员。",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 拥有 $2 个 {{plural:$2|kitten|kittens}}。{{gender:$3|He|She}} 喜欢与 {{plural:$2|it|them}} 一起玩。",
+    "offline": "没有可用的网络连接",
+    "Invalid URL": "当前服务器中没有可供使用的应用程序，请联系管理员。",
+    "RootedJailBroken": "应用程序不可用，因为手机已越狱或已执行 root 操作。"
+}

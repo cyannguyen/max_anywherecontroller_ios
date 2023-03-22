@@ -1,0 +1,11 @@
+
+init:
+     [echo] init with im_action: install
+
+do_upgrade_unzip:
+
+do_not_do_unzip:
+     [echo] do_not_do_unzip action: install with src: C:\IBM\IMShared\files\container_latest_7.6.4.20200219-1155.zipp to target: C:\IBM\Anywhere\MaximoAnywhereAppCntr 
+     [echo] Completed do_not_do_unzip
+
+unzip_file_if_update2:

@@ -1,0 +1,19 @@
+{
+    "username": "Användarnamn",
+    "password": "Lösenord",
+    "serverurl": "URL för Maximo-server",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Anslut",
+    "loading": "Läser in...",
+    "updating": "Söker efter programuppdateringar ...",
+    "nonet": "Ingen nätverksanslutning tillgänglig",
+    "download": "Hämtar",
+    "serverurlinvalid": "Applikationen är inte tillgänglig att användas från den aktuella servern. Kontakta administratören.",
+    "completed": "Hämtningen slutfördes",
+    "canceled": "Hämtningen avbröts",
+    "notavaliable": "Applikationen är inte tillgänglig att användas från den aktuella servern. Kontakta administratören.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 har $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} tycker om att leka med {{plural:$2|it|them}}.",
+    "offline": "Ingen nätverksanslutning tillgänglig",
+    "Invalid URL": "Applikationen är inte tillgänglig att användas från den aktuella servern. Kontakta administratören.",
+    "RootedJailBroken": "Appen är inte tillgänglig eftersom telefonen är jailbreakad eller rootad."
+}

@@ -1,0 +1,19 @@
+{
+    "username": "Nome do Usuário",
+    "password": "Senha",
+    "serverurl": "URL do servidor Maximo",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Conectar",
+    "loading": "Carregando...",
+    "updating": "Verificando se há atualizações do aplicativo...",
+    "nonet": "Nenhuma conexão de rede disponível",
+    "download": "Download",
+    "serverurlinvalid": "O aplicativo não está disponível para uso a partir do servidor atual, entre em contato com o administrador.",
+    "completed": "Download concluído com êxito",
+    "canceled": "Download finalizado",
+    "notavaliable": "O aplicativo não está disponível para uso a partir do servidor atual, entre em contato com o administrador.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.",
+    "offline": "Nenhuma conexão de rede disponível",
+    "Invalid URL": "O aplicativo não está disponível para uso a partir do servidor atual, entre em contato com o administrador.",
+    "RootedJailBroken": "O aplicativo não está disponível porque o telefone passou por jailbreak ou root."
+}

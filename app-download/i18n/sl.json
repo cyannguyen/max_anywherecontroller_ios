@@ -1,0 +1,19 @@
+{
+    "username": "Uporabniško ime",
+    "password": "Geslo",
+    "serverurl": "URL strežnika Maximo",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Poveži se",
+    "loading": "Nalaganje ...",
+    "updating": "Iskanje posodobitev aplikacije ...",
+    "nonet": "Omrežna povezava ni na voljo",
+    "download": "Prenašanje",
+    "serverurlinvalid": "Aplikacija ni na voljo za uporabo s trenutnega strežnika. Obrnite se na skrbnika.",
+    "completed": "Prenos je uspešno končan",
+    "canceled": "Prenos je prekinjen",
+    "notavaliable": "Aplikacija ni na voljo za uporabo s trenutnega strežnika. Obrnite se na skrbnika.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 ima $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} se rad(-a) igra z {{plural:$2|it|them}}.",
+    "offline": "Omrežna povezava ni na voljo",
+    "Invalid URL": "Aplikacija ni na voljo za uporabo s trenutnega strežnika. Obrnite se na skrbnika.",
+    "RootedJailBroken": "Aplikacija ni na voljo, ker je telefon odklenjen ali ima omogočen korenski dostop."
+}

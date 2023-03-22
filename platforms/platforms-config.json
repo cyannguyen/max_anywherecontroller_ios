@@ -1,0 +1,12 @@
+{   "configVersion": "1.0.0" ,
+    "platforms": {
+        "android":{"name": "cordova-android-8.0.0.tar.gz",
+                    "version": "8.0.0"},
+
+        "ios" : {"name": "cordova-ios-5.1.1.tgz",
+                    "version": "5.1.1"},
+
+        "windows" : {"name": "cordova-windows-7.0.0.tar.gz",
+                        "version": "7.0.0"}
+    }
+}

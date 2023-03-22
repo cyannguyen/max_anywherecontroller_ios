@@ -1,0 +1,132 @@
+<!--
+/*
+ * Licensed Materials - Property of IBM
+ *
+ * 5725-M39
+ *
+ * (C) Copyright IBM Corp. 2020 All Rights Reserved
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ */
+-->
+
+<!doctype html>
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/carbon-components.css">
+    <script type="text/javascript" src="js/lib/carbon-components.min.js"></script>
+    <title>Maximo Anywhere</title>
+</head>
+
+<body>
+    <div class="app">
+        <div class="bx--grid" style="text-align:center;">
+            <div class="bx--row">
+                <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16" style="margin:auto">
+                    <img src="./img/mx_icon.svg" class="productLogo" />
+                </div>
+            </div>
+            <div class="bx--row">
+                <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16" style="margin:auto">
+                    <div class="bx--row">
+                        <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16">
+                            <h2 id="title" style="text-align: center;" class="bx--heading-2 productName">Maximo Anywhere</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="deviceready" class="bx--row">
+                <div class="bx--form-item url-form bx--col-sm-4 bx--col-md-8 bx--col-lg-16">
+
+                    <div class="bx--form-item bx--text-input-wrapper input-container">
+<!--                         <label for="serverURL" class="bx--label" data-i18n="serverurl"> -->
+<!--                         </label> -->
+                        <div class="bx--text-input__field-wrapper input-container">
+                            <input id="serverURL" type="text" class="bx--text-input input-box" autocapitalize="none" data-i18n="[placeholder]url-placeholder">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bx--row">
+                <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16">
+                    <div id="error-msg-box" data-notification class="bx--inline-notification bx--inline-notification--error hide-error" style="max-width: inherit !important; background-color: #FFBABA; color: #1e201c; display:none" role="alert">
+                        <div class="bx--inline-notification__details">
+                            <!-- <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;" xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M10,1c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S15,1,10,1z M13.5,14.5l-8-8l1-1l8,8L13.5,14.5z"></path><path d="M13.5,14.5l-8-8l1-1l8,8L13.5,14.5z" data-icon-path="inner-path" opacity="0"></path></svg> -->
+                            <div class="bx--inline-notification__text-wrapper">
+                                <p id="error-message-text" class="bx--inline-notification__subtitle"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bx--row index-row">
+                <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16">
+                    <div id="connectBtDiv" class="button-cl center-it">
+                        <button style="padding: calc(0.875rem - 3px) 30px calc(0.875rem - 3px) 30px;  margin-top: 1rem;" id="bt" data-i18n="login" value="Connect" class="bx--btn bx--btn--primary hide-error" type="button" onclick="authenticate()">
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bx--row index-row">
+                <div  style="border: none;"  class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16">
+                    <div id="privacyLinkDiv" style="border: none;" class="center-it">
+                        <button style="background: none!important;  border: none; padding: calc(0.875rem - 3px) 30px calc(0.875rem - 3px) 30px; color: #0000FF; " id="ppbt" data-i18n="Privacy Policy" value="Privacy Policy" class="hide-error" type="button" onclick="showPrivacyAlert()">
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bx--row index-row">
+                <div class="bx--col-sm-4 bx--col-md-8 bx--col-lg-16" style="margin:auto">
+                    <img src="./img/IBMLogo.svg" class="IBMLogo" />
+                </div>
+            </div>
+        </div>
+        <div id="privacyDialog" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+               <div id="modal-header" class="modal-header"></div>
+               <div id="modal-text" class="modal-text"></div>
+               <div class="btnrow" class="modal-footer">
+                   <button style="margin: auto; background: none!important;  border: none; color: #007AFF; font-size: 1rem; position: absolute; left: 35px;" value="Done" data-i18n="Done" type="button" class="close"> </button>
+               </div>
+            </div>
+        </div> 
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/eulaprivacy.js"></script>
+    <script type="text/javascript" src="js/appdownload.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-3.4.0.min.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.messagestore.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.fallbacks.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.parser.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.emitter.js"></script>
+    <script src="js/lib/jquery-i18n/jquery.i18n.language.js"></script>
+    <script src="js/lib/jquery-i18n/languages/he.js"></script>
+    <script src="js/lib/jquery-i18n/languages/fi.js"></script>
+    <script src="js/lib/jquery-i18n/languages/ml.js"></script>
+
+</body>
+
+</html>

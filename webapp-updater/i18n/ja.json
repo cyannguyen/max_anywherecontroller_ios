@@ -1,0 +1,19 @@
+{
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "serverurl": "Maximo サーバー URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "接続",
+    "loading": "ロードしています ...",
+    "updating": "アプリケーションの更新を確認しています ...",
+    "nonet": "使用できるネットワーク接続がありません",
+    "download": "ダウンロードしています",
+    "serverurlinvalid": "現在のサーバーから使用できるアプリケーションがありません。管理者に連絡してください。",
+    "completed": "ダウンロードが正常に完了しました",
+    "canceled": "ダウンロードが強制終了されました",
+    "notavaliable": "現在のサーバーから使用できるアプリケーションがありません。管理者に連絡してください。",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 には $2 匹の {{plural:$2|kitten|kittens}} がいます。{{gender:$3|He|She}} は {{plural:$2|it|them}} と遊ぶのが好きです。",
+    "offline": "使用できるネットワーク接続がありません",
+    "Invalid URL": "現在のサーバーから使用できるアプリケーションがありません。管理者に連絡してください。",
+    "RootedJailBroken": "電話が Jailbreak またはルート化されているため、アプリケーションを使用できません。"
+}

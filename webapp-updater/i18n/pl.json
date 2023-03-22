@@ -1,0 +1,19 @@
+{
+    "username": "Nazwa użytkownika",
+    "password": "Hasło",
+    "serverurl": "Adres URL serwera Maximo",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Połącz",
+    "loading": "Ładowanie...",
+    "updating": "Sprawdzanie, czy są dostępne aktualizacje aplikacji...",
+    "nonet": "Brak dostępnego połączenia sieciowego",
+    "download": "Pobieranie",
+    "serverurlinvalid": "Aplikacja nie jest dostępna do użycia z bieżącego serwera, skontaktuj się z administratorem.",
+    "completed": "Pobieranie zakończone pomyślnie",
+    "canceled": "Pobieranie przerwane",
+    "notavaliable": "Aplikacja nie jest dostępna do użycia z bieżącego serwera, skontaktuj się z administratorem.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 ma $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} lubi bawić się z {{plural:$2|it|them}}.",
+    "offline": "Brak dostępnego połączenia sieciowego",
+    "Invalid URL": "Aplikacja nie jest dostępna do użycia z bieżącego serwera, skontaktuj się z administratorem.",
+    "RootedJailBroken": "Aplikacja nie jest dostępna, ponieważ telefon ma zmodyfikowany system operacyjny (jailbroken/rooted)."
+}

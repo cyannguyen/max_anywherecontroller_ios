@@ -1,0 +1,40 @@
+{
+    "platforms": {
+        "ios": {
+            "xcode": {
+                "minVersion": "10.1",
+                "maxVersion": ""
+            },
+            "iosSdk": {
+                "minVersion": "12.1",
+                "maxVersion": ""
+            },
+            "attributes": ["provisioningProfile"]
+        },
+        "android": {
+            "java": {
+                "minVersion": "",
+                "maxVersion": ""
+            },
+            "apiLevel": {
+                "minVersion": "",
+                "maxVersion": ""
+            },
+            "buildTools": {
+                "minVersion": "",
+                "maxVersion": ""
+            }
+        },
+
+        "windows": {
+            "visualStudio": {
+                "minVersion": "",
+                "maxVersion": ""
+            },
+            "sdk": {
+                "minVersion": "",
+                "maxVersion": ""
+            }
+        }
+    }
+}

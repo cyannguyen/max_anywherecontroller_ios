@@ -1,0 +1,19 @@
+{
+    "username": "User name",
+    "password": "Password",
+    "serverurl": "Maximo Server URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Connect",
+    "loading": "Loading ...",
+    "updating": "Checking for application updates ...",
+    "nonet": "No network connection available",
+    "download": "Downloading",
+    "serverurlinvalid": "Application is not available to use from the current server, please contact your administrator.",
+    "completed": "Download completed successfully",
+    "canceled": "Download terminated",
+    "notavaliable": "Application is not available to use from the current server, please contact your administrator.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.",
+    "offline": "No network connection available",
+    "Invalid URL": "Application is not available to use from the current server, please contact your administrator.",
+    "RootedJailBroken": "The app is not available because the phone is jailbroken or rooted."
+}

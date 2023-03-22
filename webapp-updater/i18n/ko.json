@@ -1,0 +1,19 @@
+{
+    "username": "사용자 이름",
+    "password": "비밀번호",
+    "serverurl": "Maximo 서버 URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "연결",
+    "loading": "로드 중 ...",
+    "updating": "애플리케이션 업데이트 확인 중 ...",
+    "nonet": "사용 가능한 네트워크 연결 없음",
+    "download": "다운로드",
+    "serverurlinvalid": "현재 서버에서 사용할 수 있는 애플리케이션이 없습니다. 관리자에게 문의하십시오. ",
+    "completed": "다운로드가 완료되었습니다. ",
+    "canceled": "다운로드가 중지되었습니다. ",
+    "notavaliable": "현재 서버에서 사용할 수 있는 애플리케이션이 없습니다. 관리자에게 문의하십시오. ",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1에 $2 {{plural:$2|kitten|kittens}}이(가) 있습니다. {{gender:$3|He|She}}이(가) {{plural:$2|it|them}}과(와) 놀고 싶어합니다.",
+    "offline": "사용 가능한 네트워크 연결 없음",
+    "Invalid URL": "현재 서버에서 사용할 수 있는 애플리케이션이 없습니다. 관리자에게 문의하십시오. ",
+    "RootedJailBroken": "폰이 탈옥(jailbreak) 또는 루팅(rooting)되어 앱을 이용할 수 없습니다. "
+}

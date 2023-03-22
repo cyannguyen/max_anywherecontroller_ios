@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "displayName": "",
+    "version": "",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+    },
+    "keywords": [
+      "ecosystem:anywhere"
+    ],
+    "author": "Maximo Anywhere",
+    "license": "IBM",
+    "dependencies": {
+    },
+    "cordova": {
+      "plugins": {
+      },
+      "platforms": [
+      ]
+    }
+  }

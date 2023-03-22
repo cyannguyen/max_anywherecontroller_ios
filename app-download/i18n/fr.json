@@ -1,0 +1,19 @@
+{
+    "username": "Nom d'utilisateur",
+    "password": "Mot de passe",
+    "serverurl": "URL du serveur Maximo ",
+    "url-placeholder": "https://<hôte>:<port>/<contexte>",
+    "login": "Connecter",
+    "loading": "Chargement en cours...",
+    "updating": "Recherche des mises à jour de l'application...",
+    "nonet": "Aucune connexion réseau disponible",
+    "download": "Téléchargement en cours",
+    "serverurlinvalid": "L'application ne peut pas être utilisée à partir du serveur en cours ; contactez votre administrateur. ",
+    "completed": "Le téléchargement a abouti",
+    "canceled": "Téléchargement abandonné ",
+    "notavaliable": "L'application ne peut pas être utilisée à partir du serveur en cours ; contactez votre administrateur. ",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 a $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} adore jouer avec {{plural:$2|it|them}}.",
+    "offline": "Aucune connexion réseau disponible",
+    "Invalid URL": "L'application ne peut pas être utilisée à partir du serveur en cours ; contactez votre administrateur. ",
+    "RootedJailBroken": "L'application n'est pas disponible car le téléphone est débridé ou ancré. "
+}

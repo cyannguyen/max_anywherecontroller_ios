@@ -1,0 +1,108 @@
+
+
+
+====================
+summary
+====================
+
+  [INFO]  2023-3-17 16:25:47   Loading Container.properties
+  [INFO]  2023-3-17 16:25:47   Validating Container properties
+  [INFO]  2023-3-17 16:25:47   Apps To Build: PhysicalCount, IssuesReturns, Transfers
+  [INFO]  2023-3-17 16:25:47   Platforms To Build: ios
+  [INFO]  2023-3-17 16:25:47   Anywhere Base Directory: /var/avenuejsc/IBM/Anywhere/MaximoAnywhere
+  [INFO]  2023-3-17 16:25:47   Web Content Included : false
+  [INFO]  2023-3-17 16:25:47   Verifying pre-requisites for iOS build
+  [INFO]  2023-3-17 16:25:47   Verify required SDK
+  [INFO]  2023-3-17 16:26:0   DriverKit SDKs:
+	DriverKit 21.4                	-sdk driverkit21.4
+
+iOS SDKs:
+	iOS 15.5                      	-sdk iphoneos15.5
+
+iOS Simulator SDKs:
+	Simulator - iOS 15.5          	-sdk iphonesimulator15.5
+
+macOS SDKs:
+	macOS 12.3                    	-sdk macosx12.3
+
+tvOS SDKs:
+	tvOS 15.4                     	-sdk appletvos15.4
+
+tvOS Simulator SDKs:
+	Simulator - tvOS 15.4         	-sdk appletvsimulator15.4
+
+watchOS SDKs:
+	watchOS 8.5                   	-sdk watchos8.5
+
+watchOS Simulator SDKs:
+	Simulator - watchOS 8.5       	-sdk watchsimulator8.5
+
+
+  [INFO]  2023-3-17 16:26:0   Verify XCode
+  [INFO]  2023-3-17 16:26:1   Xcode 13.4.1
+Build version 13F100
+
+  [INFO]  2023-3-17 16:26:1   iOs Package Type: Development
+  [INFO]  2023-3-17 16:26:1   Loading Build properties
+  [INFO]  2023-3-17 16:26:1   Default Maximo server will be set to: http://192.168.18.171:9080/maximo
+  [INFO]  2023-3-17 16:26:1   Installing Container Dependencies: Plugins
+  [INFO]  2023-3-17 16:26:9   Extracted 4224 entries
+  [INFO]  2023-3-17 16:26:9   Initiating app discovery
+  [INFO]  2023-3-17 16:26:9   Valid app found in: /var/avenuejsc/IBM/Anywhere/MaximoAnywhere/apps/IssuesReturns
+  [INFO]  2023-3-17 16:26:9   Loading app-descriptor.xml
+  [INFO]  2023-3-17 16:26:9   Valid app found in: /var/avenuejsc/IBM/Anywhere/MaximoAnywhere/apps/PhysicalCount
+  [INFO]  2023-3-17 16:26:9   Loading app-descriptor.xml
+  [INFO]  2023-3-17 16:26:9   Valid app found in: /var/avenuejsc/IBM/Anywhere/MaximoAnywhere/apps/Transfers
+  [INFO]  2023-3-17 16:26:9   Loading app-descriptor.xml
+  [INFO]  2023-3-17 16:26:9   Searching for valid provisioning profile for: com.avenue.maximoanywhere.IssuesReturns
+  [INFO]  2023-3-17 16:26:9   Searching for valid provisioning profile for: com.avenue.maximoanywhere.PhysicalCount
+  [INFO]  2023-3-17 16:26:9   Searching for valid provisioning profile for: com.avenue.maximoanywhere.Transfers
+  [INFO]  2023-3-17 16:26:12   Provisioning profile for: PhysicalCount: e30774d5-10b2-40eb-9f49-53f380e3a87a
+  [INFO]  2023-3-17 16:26:12   Team ID: PhysicalCount: YB687AT2F3
+  [INFO]  2023-3-17 16:26:12   Provisioning profile for: Transfers: 5edaf259-41d6-451d-9c08-42f90ebfd0d7
+  [INFO]  2023-3-17 16:26:12   Team ID: Transfers: YB687AT2F3
+  [INFO]  2023-3-17 16:26:12   Provisioning profile for: IssuesReturns: b329b6a5-35df-453f-8ae3-19fc4e0e874a
+  [INFO]  2023-3-17 16:26:12   Team ID: IssuesReturns: YB687AT2F3
+  [INFO]  2023-3-17 16:26:12   Proceeding to build following apps: IssuesReturns, PhysicalCount, Transfers
+
+
+
+========================================
+Summary for IssuesReturns build
+========================================
+
+  [INFO]  2023-3-17 16:26:12   [IssuesReturns::ios]  Initializing App IssuesReturns for platform ios--
+  [INFO]  2023-3-17 16:26:48   [IssuesReturns::ios]  Completed App Initialization: IssuesReturns
+  [INFO]  2023-3-17 16:26:48   [IssuesReturns::ios]  Building App: IssuesReturns
+  [INFO]  2023-3-17 16:27:28   [IssuesReturns::ios]  iOS app for IssuesReturns built successfully 
+  [INFO]  2023-3-17 16:27:28   [IssuesReturns::ios]  Built IssuesReturns to: /private/var/avenuejsc/IBM/Anywhere/MaximoAnywhereAppCntr/bin/ios
+  [INFO]  2023-3-17 16:27:28   [IssuesReturns::ios]  Completed App Build for IssuesReturns for platform ios
+
+
+
+========================================
+Summary for PhysicalCount build
+========================================
+
+  [INFO]  2023-3-17 16:27:28   [PhysicalCount::ios]  Initializing App PhysicalCount for platform ios--
+  [INFO]  2023-3-17 16:28:1   [PhysicalCount::ios]  Completed App Initialization: PhysicalCount
+  [INFO]  2023-3-17 16:28:1   [PhysicalCount::ios]  Building App: PhysicalCount
+  [INFO]  2023-3-17 16:29:6   [PhysicalCount::ios]  iOS app for PhysicalCount built successfully 
+  [INFO]  2023-3-17 16:29:6   [PhysicalCount::ios]  Built PhysicalCount to: /private/var/avenuejsc/IBM/Anywhere/MaximoAnywhereAppCntr/bin/ios
+  [INFO]  2023-3-17 16:29:6   [PhysicalCount::ios]  Completed App Build for PhysicalCount for platform ios
+
+
+
+========================================
+Summary for Transfers build
+========================================
+
+  [INFO]  2023-3-17 16:29:6   [Transfers::ios]  Initializing App Transfers for platform ios--
+  [INFO]  2023-3-17 16:30:2   [Transfers::ios]  Completed App Initialization: Transfers
+  [INFO]  2023-3-17 16:30:2   [Transfers::ios]  Building App: Transfers
+  [INFO]  2023-3-17 16:30:40   [Transfers::ios]  iOS app for Transfers built successfully 
+  [INFO]  2023-3-17 16:30:40   [Transfers::ios]  Built Transfers to: /private/var/avenuejsc/IBM/Anywhere/MaximoAnywhereAppCntr/bin/ios
+  [INFO]  2023-3-17 16:30:40   [Transfers::ios]  Completed App Build for Transfers for platform ios
+
+
+  [INFO]  2023-3-17 16:30:40   Container build finished

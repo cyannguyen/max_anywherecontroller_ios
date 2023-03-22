@@ -1,0 +1,19 @@
+{
+    "username": "Gebruikersnaam",
+    "password": "Wachtwoord",
+    "serverurl": "URL van Maximo-server",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Verbinden",
+    "loading": "Bezig met laden...",
+    "updating": "Bezig met controleren op toepassingsupdates...",
+    "nonet": "Geen netwerkverbinding beschikbaar",
+    "download": "Bezig met downloaden",
+    "serverurlinvalid": "Toepassing is niet beschikbaar voor gebruik vanaf de huidige server. Neem contact op met de beheerder.",
+    "completed": "Download is voltooid",
+    "canceled": "Download is beëindigd",
+    "notavaliable": "Toepassing is niet beschikbaar voor gebruik vanaf de huidige server. Neem contact op met de beheerder.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 heeft $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} houdt ervan om te spelen met {{plural:$2|it|them}}.",
+    "offline": "Geen netwerkverbinding beschikbaar",
+    "Invalid URL": "Toepassing is niet beschikbaar voor gebruik vanaf de huidige server. Neem contact op met de beheerder.",
+    "RootedJailBroken": "De app is niet beschikbaar omdat de telefoon jailbroken of geroot is."
+}

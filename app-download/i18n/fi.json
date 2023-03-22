@@ -1,0 +1,19 @@
+{
+    "username": "Käyttäjätunnus",
+    "password": "Salasana",
+    "serverurl": "Maximo-palvelimen URL-osoite",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Yhdistä",
+    "loading": "Lataus on meneillään...",
+    "updating": "Sovelluksen päivitysten tarkistus on meneillään...",
+    "nonet": "Verkkoyhteyttä ei ole käytettävissä",
+    "download": "Lataus on meneillään",
+    "serverurlinvalid": "Sovellusta ei voi käyttää nykyisestä palvelimesta. Ota yhteys järjestelmänvalvojaan.",
+    "completed": "Lataus on päättynyt virheittä",
+    "canceled": "Lataus on lopetettu",
+    "notavaliable": "Sovellusta ei voi käyttää nykyisestä palvelimesta. Ota yhteys järjestelmänvalvojaan.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "Henkilöllä $1 on $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} on iloinen, kun saa leikkiä {{plural:$2|it|them}} kanssa.",
+    "offline": "Verkkoyhteyttä ei ole käytettävissä",
+    "Invalid URL": "Sovellusta ei voi käyttää nykyisestä palvelimesta. Ota yhteys järjestelmänvalvojaan.",
+    "RootedJailBroken": "Sovellus ei ole käytettävissä, koska puhelimen suojaukset on murrettu."
+}

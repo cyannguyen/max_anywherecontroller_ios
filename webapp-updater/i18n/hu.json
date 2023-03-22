@@ -1,0 +1,19 @@
+{
+    "username": "Felhasználónév",
+    "password": "Jelszó",
+    "serverurl": "Maximo kiszolgáló URL",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Csatlakozás",
+    "loading": "Betöltés ...",
+    "updating": "Alkalmazásfrissítések ellenőrzése ...",
+    "nonet": "Nincs elérhető hálózati kapcsolat",
+    "download": "Letöltés",
+    "serverurlinvalid": "Az alkalmazás nem használható az aktuális kiszolgálóról, lépjen kapcsolatba az adminisztrátorral.",
+    "completed": "A letöltés sikeresen befejeződött",
+    "canceled": "Letöltés befejeződött",
+    "notavaliable": "Az alkalmazás nem használható az aktuális kiszolgálóról, lépjen kapcsolatba az adminisztrátorral.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 a következővel rendelkezik: $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} szeret vele játszani: {{plural:$2|it|them}}.",
+    "offline": "Nincs elérhető hálózati kapcsolat",
+    "Invalid URL": "Az alkalmazás nem használható az aktuális kiszolgálóról, lépjen kapcsolatba az adminisztrátorral.",
+    "RootedJailBroken": "Az alkalmazás nem érhető el, mivel a telefont feltörték vagy root hozzáféréssel módosították. "
+}

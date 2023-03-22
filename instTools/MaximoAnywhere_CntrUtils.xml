@@ -1,0 +1,333 @@
+<!--
+  Begin Standard Header
+  
+  Licensed Materials - Property of IBM
+  
+  Restricted Materials of IBM
+
+  (C) COPYRIGHT IBM CORP. 2019.  All Rights Reserved.
+  
+  US Government Users Restricted Rights - Use, duplication or
+  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+  
+  End Standard Header
+-->
+
+<!--
+  Defect   Name       Date      Description
+  =======  =========  ========  ===============================================
+
+  End Change History
+-->
+
+<project name="MaximoAnywhere_CntrUtils" basedir="." default="unzip">
+
+	<description>
+        This script has utility functions for use by the installer.  Currently there are:
+        - unzip: unzip the source file into the target directory
+   		- copyDir: copies a directory from one place to another
+   	  	- delete_if_install: delete a directory if the action being performed is an install
+   </description>
+
+	<target name="init">
+		<echo message="init with im_action: ${im_action}" />
+		<condition property="delete_on_install">
+			<and>
+				<equals arg1="${im_action}" arg2="install" casesensitive="false" trim="true" />
+				<available file="${dir_to_delete}" type="dir" />
+			</and>
+		</condition>
+		<condition property="delete_on_upgrade">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+				<available file="${dir_to_delete}" type="dir" />
+			</and>
+		</condition>
+		<condition property="delete_on_rollback">
+			<and>
+				<equals arg1="${im_action}" arg2="rollback" casesensitive="false" trim="true" />
+				<available file="${dir_to_delete}" type="dir" />
+			</and>
+		</condition>
+
+		<condition property="delete_on_uninstall">
+			<and>
+				<equals arg1="${im_action}" arg2="uninstall" casesensitive="false" trim="true" />
+				<available file="${dir_to_delete}" type="dir" />
+			</and>
+		</condition>
+
+		<condition property="delete_file_on_uninstall">
+			<and>
+				<equals arg1="${im_action}" arg2="uninstall" casesensitive="false" trim="true" />
+				<available file="${file_to_delete}" type="file" />
+			</and>
+		</condition>
+
+		<condition property="is_update">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+			</and>
+		</condition>
+
+		<condition property="copy_dir_on_update">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+				<available file="${src_dir}" type="dir" />
+			</and>
+		</condition>
+
+		<condition property="move_dir_on_update">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+				<available file="${src_dir}" type="dir" />
+			</and>
+		</condition>
+
+		<condition property="copy_file_on_update">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+				<available file="${src_dir}/${src_file}" type="file" />
+			</and>
+		</condition>
+
+		<condition property="unzip_on_update">
+			<and>
+				<equals arg1="${im_action}" arg2="update" casesensitive="false" trim="true" />
+				<available file="${src_file}" type="file" />
+			</and>
+		</condition>
+
+		<condition property="unzip_on_install">
+			<and>
+				<equals arg1="${im_action}" arg2="install" casesensitive="false" trim="true" />
+				<available file="${src_file}" type="file" />
+			</and>
+		</condition>
+
+		<condition property="unlink_on_install">
+			<and>
+				<equals arg1="${im_action}" arg2="install" casesensitive="false" trim="true" />
+				<available file="${dir_to_unlink}" type="dir" />
+			</and>
+		</condition>
+
+	</target>
+
+	<target name="unzip" description="Unzip source file 'zip_src' into target directory 'zip_target'">
+		<echo message="zip_src: ${zip_src}" />
+		<echo message="zip_target:  ${zip_target}" />
+		<unzip src="${zip_src}" dest="${zip_target}" />
+	</target>
+
+	<target name="unzip_file_if_update" depends="init,do_unzip,do_not_do_unzip" if="unzip_on_update" description="Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="unzip_file_if_update action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<echo message="Completed unzip_file_if_update" />
+	</target>
+	<target name="unzip_file_if_update2" depends="init,do_upgrade_unzip,do_not_do_unzip" if="unzip_on_update" description="Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="unzip_file_if_update2 action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<echo message="Completed unzip_file_if_update2" />
+	</target>
+	<target name="do_unzip" depends="init" if="unzip_on_update" description="do_unzip Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside do_unzip action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<unzip src="${src_file}" dest="${target_dir}" />
+		<echo message="Completed do_unzip" />
+	</target>
+	<target name="do_not_do_unzip" depends="init" unless="unzip_on_update" description="Do not unzip source file 'src_file' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="do_not_do_unzip action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<echo message="Completed do_not_do_unzip" />
+	</target>
+	<target name="do_upgrade_unzip" depends="init" if="unzip_on_update" description="do_unzip Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'update' and exclude build.properties">
+		<echo message="Inside do_upgrade_unzip action: ${im_action} with src: ${src_file} to target: ${target_dir} with exclude for build.properties " />
+		<unzip src="${src_file}" dest="${target_dir}">
+			<patternset>
+				<exclude name="**/build.properties" />
+			</patternset>
+		</unzip>
+		<echo message="Completed do_unzip" />
+	</target>
+
+	<target name="unzip_file_if_install" depends="init,do_install_unzip,do_not_do_install_unzip" if="unzip_on_install" description="Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'install'">
+		<tstamp>
+			<format property="current.time" pattern="MM/dd/yyyy hh:mm:ss aa" />
+		</tstamp>
+		<echo message="unzip completed by: ${current.time}" />
+
+		<echo message="unzip_file_if_install action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<echo message="Completed unzip_file_if_install" />
+	</target>
+	<target name="do_install_unzip" depends="init" if="unzip_on_install" description="do_unzip Conditionally unzip 'src_file' into target directory 'target_dir' based on the install type being 'install'">
+		<echo message="Inside do_unzip action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<unzip src="${src_file}" dest="${target_dir}" />
+		<echo message="Completed do_unzip" />
+	</target>
+	<target name="do_not_do_install_unzip" depends="init" unless="unzip_on_install" description="Do not unzip source file 'src_file' into target directory 'target_dir' based on the install type being 'install'">
+		<echo message="do_not_do_unzip action: ${im_action} with src: ${src_file} to target: ${target_dir} " />
+		<echo message="Completed do_not_do_unzip" />
+	</target>
+
+	<target name="copy_dir" description="copy source file 'src_dir' into target directory 'target_dir'">
+		<echo message="Inside copy_dir with src: ${src_dir} to target: ${target_dir} " />
+		<delete dir="${target_dir}" />
+		<echo message="after deleting target dir first" />
+		<copy todir="${target_dir}" failonerror="false">
+			<fileset dir="${src_dir}" />
+		</copy>
+	</target>
+
+	<target name="copy_dir_if_update" depends="init,do_dir_copy,no_dir_copy" if="copy_dir_on_update" description="Conditionally copy source dir 'src_dir' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside copy_dir_if_update action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<!-- copy todir="${target_dir}" failonerror="false">
+			<fileset dir="${src_dir}" />
+		</copy -->
+		<echo message="Completed copy_dir_if_update" />
+	</target>
+
+	<!-- target name="move_dir_if_update" depends="init,do_dir_move,no_dir_move" if="move_dir_on_update" description="Conditionally move source dir 'src_dir' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside move_dir_if_update action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<echo message="Completed move_dir_if_update" />
+	</target>
+
+	<target name="copy_dir_if_update_ver" depends="init,do_dir_copy_ver,no_dir_copy" if="is_update" description="Conditionally copy source dir 'src_dir' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside copy_dir_if_update_ver version: ${prevVer} action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+
+		<echo message="Completed copy_dir_if_update_ver" />
+	</target -->
+
+	<target name="do_dir_copy" depends="init" if="copy_dir_on_update" description="do_dir_copy Conditionally copy source dir 'src_dir' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside do_dir_copy action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<delete dir="${target_dir}" />
+		<echo message="after deleting target dir first" />
+		<copy todir="${target_dir}" failonerror="false" includeemptydirs="yes">
+			<fileset dir="${src_dir}" />
+		</copy>
+		<echo message="Completed do_dir_copy" />
+	</target>
+
+	<target name="no_dir_copy" depends="init" unless="copy_dir_on_update" description="Do not copy source dir 'src_dir' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="no_dir_copy action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<echo message="Completed no_dir_copy" />
+	</target>
+
+	<target name="copy_prov_prof" description="copying provisioning profiles from source file 'src_dir' into target directory 'target_dir'">
+		<echo message="Inside copy_prov_prof with src: ${src_dir} to target: ${target_dir} " />
+		<mkdir dir="${target_dir}" />
+		<copy todir="${target_dir}" failonerror="false">
+			<fileset dir="${src_dir}">
+				<include name="**/*.mobileprovision" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="do_dir_move" depends="init" if="move_dir_on_update" description="do_dir_move Conditionally move source dir 'src_dir' to target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside do_dir_move action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<delete dir="${target_dir}" />
+		<echo message="after deleting target dir first" />
+		<move todir="${target_dir}" failonerror="false" includeEmptyDirs="yes">
+			<fileset dir="${src_dir}" />
+		</move>
+		<echo message="Completed do_dir_move" />
+	</target>
+	<target name="no_dir_move" depends="init" unless="move_dir_on_update" description="Do not move source dir 'src_dir' to target directory 'target_dir' based on the install type being 'update'">
+		<echo message="no_dir_move action: ${im_action} with src: ${src_dir} to target: ${target_dir} " />
+		<echo message="Completed no_dir_move" />
+	</target>
+
+	<target name="copy_file_if_update" depends="init" if="copy_file_on_update" description="Conditionally copy source file 'src_file' into target directory 'target_dir' based on the install type being 'update'">
+		<echo message="Inside copy_file_if_update action: ${im_action} with src: ${src_dir}/${src_file} to target: ${target_dir} " />
+		<copy file="${src_dir}/${src_file}" todir="${target_dir}" failonerror="false" overwrite="true" />
+		<echo message="Completed copy_file_if_update" />
+	</target>
+
+	<target name="delete_if_install" depends="init" if="delete_on_install" description="Conditionally delete directory based on the install type being 'install'">
+		<echo message="Deleting ${dir_to_delete}" />
+		<delete dir="${dir_to_delete}" failonerror="false" />
+	</target>
+
+	<target name="delete_if_rollback" depends="init" if="delete_on_rollback" description="Conditionally delete directory based on the install type being 'rollback'">
+		<echo message="Deleting ${dir_to_delete}" />
+		<delete dir="${dir_to_delete}" failonerror="false" />
+	</target>
+
+	<target name="delete_if_uninstall" depends="init" if="delete_on_uninstall" description="Conditionally delete directory based on the install type being 'uninstall'">
+		<echo message="Deleting ${dir_to_delete}" />
+		<delete dir="${dir_to_delete}" failonerror="false" />
+	</target>
+
+	<target name="delete_file_if_uninstall" depends="init" if="delete_file_on_uninstall" description="Conditionally delete file based on the install type being 'uninstall'">
+		<echo message="Deleting ${file_to_delete}" />
+		<delete file="${file_to_delete}" failonerror="false" />
+	</target>
+
+	<target name="delete_if_upgrade" depends="init" if="delete_on_upgrade" description="Conditionally delete directory based on the install type being 'install'">
+		<echo message="Deleting ${dir_to_delete}" />
+		<delete dir="${dir_to_delete}" failonerror="false" />
+	</target>
+
+	<target name="selectiveUnzip" description="Selectively choose an unzip based on a variable im_action">
+		<echo message="this is upgrade variable is: ${im_action}" />
+		<condition property="upgrade" value="t">
+			<equals arg1="${im_action}" arg2="update" />
+		</condition>
+		<antcall target="unzipChoice" />
+	</target>
+
+	<target name="OptRestoreDirAndUnzip" description="Selectively choose an unzip based on a variable im_action">
+		<echo message="this is upgrade variable is: ${im_action}" />
+		<condition property="upgrade" value="t">
+			<equals arg1="${im_action}" arg2="update" />
+		</condition>
+		<antcall target="unzipRestoreChoice" />
+	</target>
+
+	<target name="OptUnzipAndBkup" description="Selectively choose an unzip based on a variable im_action and bkup dir after unzip">
+		<echo message="this is upgrade variable is: ${im_action}" />
+		<condition property="upgrade" value="t">
+			<equals arg1="${im_action}" arg2="update" />
+		</condition>
+		<antcall target="unzipBkupChoice" />
+	</target>
+
+	<target name="unzipChoice" depends="unzipFull,unzipDelta">
+		<echo message="unzipChoice im_action ${im_action}" />
+	</target>
+
+	<target name="unzipBkupChoice" depends="unzipFull,unzipDeltaBkup">
+		<echo message="unzipChoice im_action ${im_action}" />
+	</target>
+
+	<target name="unzipRestoreChoice" depends="unzipFull,unzipRestoreDelta">
+		<echo message="unzipRestoreChoice im_action ${im_action}" />
+	</target>
+
+	<target name="unzipFull" description="Unzip source file 'zip_src' into target directory 'instDir'" unless="upgrade">
+		<echo message="unzipFull into ${target_dir}" />
+		<unzip src="${zip_src}" dest="${target_dir}" />
+	</target>
+
+	<target name="unzipDelta" description="Unzip source file 'delta_zip_src' into target directory 'zip_target'" if="upgrade">
+		<echo message="unzipDelta into ${target_dir}" />
+		<unzip src="${delta_zip_src}" dest="${target_dir}" />
+	</target>
+
+	<target name="unzipDeltaBkup" description="Unzip source file 'delta_zip_src' into target directory 'zip_target'" if="upgrade">
+		<echo message="unzipDelta into ${target_dir}" />
+		<unzip src="${delta_zip_src}" dest="${target_dir}" />
+		<antcall target="copy_dir">
+			<param name="src_dir" value="${target_dir}" />
+			<param name="target_dir" value="${bkup_dir}" />
+		</antcall>
+	</target>
+
+	<target name="unzipRestoreDelta" description="Unzip app source file 'delta_zip_src' into target directory 'zip_target'" if="upgrade">
+		<echo message="unzipDelta restore ${prev_dir} into ${target_dir}" />
+		<delete dir="${target_dir}_save" failonerror="false" />
+		<move file="${target_dir}" todir="${target_dir}_save" failonerror="false" />
+		<copy todir="${target_dir}" failonerror="false">
+			<fileset dir="${prev_dir}" />
+		</copy>
+		<echo message="unzipDelta into ${target_dir}" />
+		<unzip src="${delta_zip_src}" dest="${target_dir}" />
+	</target>
+
+</project>

@@ -1,0 +1,19 @@
+{
+    "username": "Brugernavn",
+    "password": "Kodeord",
+    "serverurl": "URL for Maximo-server",
+    "url-placeholder": "https://<host>:<port>/<context>",
+    "login": "Opret forbindelse",
+    "loading": "Indlæser ...",
+    "updating": "Søger efter applikationsopdateringer ...",
+    "nonet": "Der er ingen tilgængelig netværksforbindelse",
+    "download": "Downloader",
+    "serverurlinvalid": "Applikationen er ikke tilgængelig til brug fra den aktuelle server. Kontakt administratoren.",
+    "completed": "Download afsluttet",
+    "canceled": "Download afbrudt",
+    "notavaliable": "Applikationen er ikke tilgængelig til brug fra den aktuelle server. Kontakt administratoren.",
+    "$1 has $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} loves to play with {{plural:$2|it|them}}.": "$1 har $2 {{plural:$2|kitten|kittens}}. {{gender:$3|He|She}} elsker at lege med {{plural:$2|it|them}}.",
+    "offline": "Der er ingen tilgængelig netværksforbindelse",
+    "Invalid URL": "Applikationen er ikke tilgængelig til brug fra den aktuelle server. Kontakt administratoren.",
+    "RootedJailBroken": "Appen er ikke tilgængelig, fordi telefonen er jailbroken eller rooted."
+}
